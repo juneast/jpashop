@@ -22,5 +22,6 @@ public class Member {
     private Address address;
 
     @OneToMany(mappedBy = "member")//order table에 있는 member에 의해 매핑된다.(읽기 전용)
-    private List<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();//필드에서 바로 초기화 하는 것이 null 문제에서 안전
+
 }
